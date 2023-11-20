@@ -30,3 +30,5 @@ Coddy Materials - общий репозиторий по направления�
 | Web	   | [Лучшая документация по Web](https://doka.guide/) |
 | Web    | [Тесты HTML](https://www.w3schools.com/html/exercise.asp?filename=exercise_html_basic1) |
 | Web    | [Тесты CSS](https://www.w3schools.com/css/exercise.asp) |
+| С    | [Лекции по Си](https://prog-cpp.ru/c/) |
+
