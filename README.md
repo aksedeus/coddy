@@ -1,7 +1,5 @@
 # Coddy Materials
 [![Typing SVG](https://readme-typing-svg.demolab.com/?lines=Hello+Teachers!;Hello+Students!&height=75;)](https://git.io/typing-svg)
-
-Дополнительные материалы по курсам для преподавателей
 ## Оглавление
 1. Введение
 2. Рекомендации
