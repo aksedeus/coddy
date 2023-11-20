@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Викторина</title>
+</head>
+<body>
+    <main class="main">
+        <div class="container">
+
+            <div class="start-menu" id="start-menu">
+                <h1 class="title">Викторина Harry Potter</h1>
+                <button class="start-btn btn" id="start-btn">Старт</button>
+            </div>
+
+            <div class="question hide" id="question">
+                <div class="question-text" id="question-text"> </div>
+
+                <div class="variants-cotainer">
+                    <button class="variant-btn"> </button>
+                    <button class="variant-btn"> </button>
+                    <button class="variant-btn"> </button>
+                    <button class="variant-btn"> </button>
+                </div>
+
+            </div>
+
+            <div class="score-menu hide" id="score-menu">
+                <h1 class="score-title">
+                    Твой счет:
+                    <p class="score-text" id="score-text"></p>
+                </h1>
+                <button class="btn" id="restart-btn">Повторить</button>
+            </div>
+        </div>
+    </main>
+
+    <script src="./questions.js"></script>
+    <script src="./index.js"></script>
+</body>
+</html>

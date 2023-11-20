@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Drag & Drop | Проект 2</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="input-block">
+        <input id="item-text-input" type="text" class="item-text-input" placeholder="Введите задачу">
+        <button id="item-create-btn" class="item-create-btn">Создать</button>
+      </div>
+      <div class="column-container">
+        <div class="column">
+          <div class="col-header start">Начать</div>
+          <div class="placeholder" id="start">
+            <!-- <div class="item" draggable="true">
+              <span class="item__delete-btn">&times;</span>
+              <p class="item__text">Изучить HTML</p>
+            </div>
+            <div class="item" draggable="true">
+              <span class="item__delete-btn">&times;</span>
+              <p class="item__text">Изучить CSS</p>
+            </div>
+            <div class="item" draggable="true">
+              <span class="item__delete-btn">&times;</span>
+              <p class="item__text">Изучить React</p>
+            </div> -->
+          </div>
+        </div>
+        <div class="column">
+          <div class="col-header progress">В процессе</div>
+          <div class="placeholder" id="start">
+            
+          </div>
+        </div>
+        <div class="column">
+          <div class="col-header done">Готовы</div>
+          <div class="placeholder" id="start">
+            
+          </div>
+        </div>
+  
+      </div>
+    </div>
+    
+    <script src="./index.js"></script>
+  </body>
+</html>

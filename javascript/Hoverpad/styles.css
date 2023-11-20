@@ -1,0 +1,30 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #111; /*Можно поменять цвет фона*/
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+}
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  max-width: 500px;
+}
+.square {
+  width: 16px;
+  height: 16px;
+  background-color: #1d1d1d; /*Можно поменять цвет клетки*/
+  margin: 2px;
+  transition: 4s; /*Скорость смены цвета квадрата*/
+}
+.square:hover {
+  transition-duration: 0s;
+}

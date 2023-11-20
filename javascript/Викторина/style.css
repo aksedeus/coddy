@@ -1,0 +1,158 @@
+@font-face {
+    font-family: "Harry Potter";
+    src: url("./fonts/HarryPotter.ttf");
+}
+
+*, *::after, *::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.main {
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-image: url("./img/1660444142_66-kartinkin-net-p-oboi-v-stile-garri-pottera-krasivo-71.jpg");
+}
+
+.container {
+    width: 1000px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+
+    /* background-color: rgba(240, 248, 255, 0.496); */
+}
+
+.start-menu {
+    text-align: center;
+}
+
+.title {
+    font-family: "Harry Potter";
+    color: rgb(240, 240, 240);
+    font-size: 130px;
+    text-shadow: -4px 1px 0px  #1c1c1c;
+}
+
+.btn {
+    width: 300px;
+    height: 150px;
+    margin-top: 150px;
+    border-radius: 16px;
+    border-color: transparent;
+    background-color: rgb(58, 59, 117);
+    color: #bde8ee;
+    font-size: 100px;
+    font-family: "Harry Potter";
+    transition: transform 0.4s;
+    cursor: pointer;
+}
+
+.btn:hover {
+    transform: scale(1.3);
+}
+
+.start-btn {
+    margin-top: 150px;
+}
+
+
+.question {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    margin-bottom: 20px;
+}
+
+.question-text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 200px;
+    background-color: rgb(58, 59, 117);
+    border: 4px solid  #eed1b3;
+    border-radius: 10px;
+    color: #bde8ee;
+    font-size: 40px;
+    text-align: center;
+}
+
+.variants-cotainer {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    row-gap: 6px;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.variant-btn {
+    width: 49%;
+    height: 80px;
+    border: 2px solid #36c587;
+    border-radius: 8px;
+    background-color:rgb(42, 56, 91);
+    color: #fff;
+    font-size: 16px;
+    transition: background-color 0.3s, color 0.3s;
+    cursor: pointer;
+}
+
+.variant-btn:hover {
+    background-color: #36c587;
+    color: rgb(28, 37, 59);
+
+}
+
+.score-menu {
+    text-align: center;
+}
+
+.score-title {
+    font-family: "Harry Potter";
+    color: rgb(248, 144, 74);
+    /* color: #e87b3c; */
+    font-size: 130px;
+    text-shadow: -4px 1px 0px  #700606;
+    text-align: center;
+}
+
+.hide {
+    display: none;
+}
+
+/* .start-btn {
+    width: 300px;
+    height: 300px;
+    position: relative;
+    border-radius: 50%;
+}
+
+.button-img {
+    width: 380px;
+    height: 380px;
+    position: absolute;
+    top: -15%;
+    right: -15%;
+}
+
+.button-text {
+    position: absolute;
+    z-index: 2;
+    top: 40%;
+    right: 15%;
+    font-size: 80px;
+    color:rgb(20, 88, 44);
+    font-weight: bold;
+    font-family: "Warcraft";
+    text-shadow: 4px 1px 0px black;
+} */

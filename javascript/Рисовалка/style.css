@@ -1,0 +1,119 @@
+*, *::after, *::before {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    position: relative;
+}
+
+.container {
+    padding: 5px 0px;
+    height: 80px;
+    /* background-color: antiquewhite; */
+    background-color: #fff;
+}
+
+.panel-container {
+    position: fixed;
+    left: 50%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 800px;
+    height: 80px;
+    margin: 0 auto;
+    margin-top: 5px;
+    border-radius: 6px;
+    background-color: rgb(247, 246, 245);
+    transform: translateX(-50%);
+    z-index: 2;
+    box-shadow: 4px 4px 10px 0px #7c7c7c;
+}
+
+.input {
+    background-color: transparent;
+    border-radius: 4px;
+}
+
+input[type="range"] {
+    -webkit-appearance: none;
+    height: 7px;
+    border: 1px solid #4b74e7;
+    border-radius: 5px;
+}
+  
+  /* Input Thumb */
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background: #4b74e7;
+    cursor: ew-resize;
+    box-shadow: 0 0 2px 0 #555;
+}
+  
+
+
+.btn {
+    padding: 6px 12px;
+    border: 2px solid #4b74e7;;
+    border-radius: 4px;
+    background-color: transparent;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.btn:hover {
+    background-color: #4b74e7;
+    color: #fff;
+}
+
+.tool-svg {
+    width: 50px;   
+    height: 50px;
+    padding: 4px;
+    cursor: pointer;
+}
+
+
+.choosed-tool {
+    border: 2px solid #4b74e7;
+    border-radius: 8px;
+}
+
+.shape-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}   
+
+.rect-inner {
+    width: 40px;   
+    height: 40px;
+    background-color: #454545;
+}
+
+.circle-inner {
+    width: 40px;   
+    height: 40px;
+    border-radius: 50%;
+    background-color: #454545;
+}
+
+.canvas {
+    position: absolute;
+    top: 0%;
+    height: 100vh;
+    /* top: 80px; */
+    left: 0;
+    width: 100%;
+    /* height: calc(100vh - 80px); */
+    /* background-color: antiquewhite; */
+    background-color: #fff;
+}
+
+
+

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Weather App</title>
+</head>
+<body>
+    <div class="container">
+        <div class="search-block">
+            <h1 class="search-title">Прогноз погоды</h1>
+            <input class="city-input" type="text" placeholder="Город" id="city-input">
+            <button class="weather-button" id="weather-button">Узнать погоду</button>
+        </div>
+        <div class="weather-details-block hide" id="weather-details-block">
+            <h2 class="city-title" id="city-title">Город</h2>
+            <div class="weather-details__information">
+                <figure class="weather-details__figure">
+                    <img id="weather-details__img" class="weather-details__img" src="./img/sun.png" alt="sun">
+                    <figcaption id="weather-details__description" class="weather-details__description">Солнечно</figcaption>
+                </figure>
+                <div class="weather-details__text">
+                    <h3 id="date">Дата:</h3>
+                    <br>
+                    <p>&#127777; Температура: <span class="weather-details__data-text" id="temperature"></span></p>
+                    <p>&#127777; Чувствуется как: <span class="weather-details__data-text" id="feels-like"></span></p>
+                    <br>
+                    <p>&#9729; Облачность: <span class="weather-details__data-text" id="clouds"></span></p>
+                    <p>&#128167; Влажность: <span class="weather-details__data-text" id="humidity"></span></p>
+                    <br>
+                    <p>&#127749; Время восхода: <span class="weather-details__data-text" id="sunrise"></span></p>
+                    <p>&#127751; Время заката: <span class="weather-details__data-text" id="sunset"></span></p>
+                </div>
+            </div>
+        </div>
+        <div class="weather-carousel hide" id="weather-carousel">
+            <img class="arrow" src="./img/arrow-left-svgrepo-com.svg" alt="prev" id="prev-arrow">
+            <div class="weather-carousel__inner" id="weather-carousel__inner">
+                <div class="weather-carousel__content" id="weather-carousel__content">
+                    
+                </div>
+            </div>
+            <img class="arrow" src="./img/arrow-right-svgrepo-com.svg" alt="next" id="next-arrow">
+        </div>
+    </div>
+
+    <script src="./index.js"></script>
+</body>
+</html>

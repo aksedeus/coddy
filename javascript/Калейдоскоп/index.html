@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="canvas_container">
+        <canvas class="canvas" id="canvas"></canvas>
+    </div>
+    <div class="tools_container">
+        <div class="tool-block">
+            <label for="">Размер кисти</label>
+            <input type="range" min="1" max="30" id="size-input">
+        </div>
+        <div class="tool-block">
+            <label for="">Цвет</label>
+            <input type="color" id="color-input">
+        </div>
+        <div class="tool-block">
+            <label for="">Цвет фона</label>
+            <input type="color" id="background-color-input">
+        </div>
+        <div class="tool-block">
+            <label for="">Кол-во симметрий</label>
+            <input type="number" id="symmetry-input" min=1>
+        </div>
+        <div class="tool-block">
+            <button id="clear-button">Очистить</button>
+        </div>
+        <div class="tool-block">
+            <button id="save-button">Сохранить</button>
+        </div>
+    </div>
+    
+    <script async defer src="./canvasHelper.js"></script>
+    <script async defer src="./index.js"></script>
+</body>
+</html>

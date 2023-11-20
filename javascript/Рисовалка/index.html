@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="panel-container">
+        <img src="./img/pencil-svgrepo-com.svg" alt="pencil" class="tool-svg choosed-tool" id="pencil-btn">
+        <img src="./img/eraser-svgrepo-com.svg" alt="eraser" class="tool-svg" id="eraser-btn">
+        <div class="tool-svg shape-btn" id="rect-btn">
+            <div class="rect-inner"></div>
+        </div>
+        <div class="tool-svg shape-btn" id="circle-btn">
+            <div class="circle-inner"></div>
+        </div>
+        <input class="input" type="color" name="" id="color-input">
+        <input class="input" type="color" name="" id="background-color-input">
+        <input class="input" type="range" min="1" max="100" name="" id="size-input">
+        <button class="btn" id="clear-btn">Очистить</button>
+        <button class="btn" id="save-btn">Сохранить</button>
+        <img src="./img/undo-svgrepo-com.svg" alt="undo" class="tool-svg" id="prev-btn">
+        <img src="./img/redo-ui-svgrepo-com.svg" alt="redo" class="tool-svg" id="next-btn">
+    </div>
+    <canvas class="canvas" id="canvas"></canvas>
+    <script src="./index.js"></script>
+</body>
+</html>
