@@ -1,0 +1,51 @@
+* {
+	padding: 0;
+	margin: 0;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+body {
+	background-color: #efefef;
+	font-family: 'Roboto', sans-serif;
+}
+
+.main {
+	background-color: #fff;
+	padding: 50px;
+	width: 90%;
+	max-width: 900px;
+	margin: auto;
+	/*Смещение по оси Х, смещение по оси У, размытие, размер тени, цвет*/
+	box-shadow: 0 0 10px 1px rgba(0,0,0,0.3);
+}
+
+.content__img {
+	display: block;
+	height: auto;
+	/*Максимальная ширина относительно родительского контейнера*/
+	max-width: 100%;
+	/*Горизонтальное центрирование*/
+	margin: 30px auto;
+	box-shadow: 0 0 10px 1px rgba(0,0,0,0.3);
+
+}
+
+.content__p {
+	font-size: 18px;
+	line-height: 1.5;
+	letter-spacing: 0.5px;
+	text-align: justify;
+}
+
+.main__heading {
+	font-size: 48px;
+	text-align: center;
+}
+
+
+
+
+
+

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="UTF-8">
+		<title>Учебник 	Python</title>
+		<meta name='viewport' content='width=device-width, initial-scale=1'>
+		<link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
+		<link rel="manifest" href="img/site.webmanifest">
+		<meta name="yandex-verification" content="9ac4fb38cc221824" />
+		<link href="https://fonts.googleapis.com/css?family=Rubik:400,900" rel="stylesheet">
+		
+		<link rel="stylesheet" href="main.css">
+	</head>
+	<body>
+		<header id='header'>
+			<div class="overlay"></div>
+			<p id="text"></p>
+			<button id="down">﹀</button>
+		</header>
+		<main>
+			<h2 class="subtitle" style='margin-top: 0'>Почему нужно научиться про&shy;грам&shy;мировать?</h2>
+			<br>
+			<code class="code"><span class="yellow">Во-первых</span>, программирование - это топ! (♡‿♡)</code>
+			<br>
+			<code class="code"><span class="blue">Во-вторых</span>, смотри первый пункт ( ͡° ͜ʖ ͡°) </code>
+			<br>
+			<code class="code"><span class="red">В-третьих</span>, можно всем говорить, что ты - программист 《 / 》</code>
+			<br>
+			<code class="code"><span class="green">В-четвертых</span>, ты же этого всегда хотел, не так ли?</code>
+			<h2 class="subtitle">Что можно почитать?</h2>
+			<a href="list.html" target='_blank' class="code link green">1. Что такое список?</a>
+			<a href="list_methods.html" target='_blank' class="code link orange">2. Методы для работы со списками</a>
+			<a href="function.html" target='_blank' class="code link yellow">3. Для чего нужны функции?</a>
+		</main>
+		<script src='js/smoothscroll.js'></script>
+		<script>
+			document.addEventListener("DOMContentLoaded", function() {
+				var name = 'Учебник Python',
+					text = document.getElementById('text');
+				
+				setTimeout(() => name.split('').forEach((character, index) => setTimeout(() => text.innerHTML += character, 150*index)),500)
+				
+				down.addEventListener('click', () => document.querySelector('main').scrollIntoView({block: "start", behavior: "smooth"}) )
+			});
+		</script>
+	</body>
+</html>
