@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Практика</title>
+	<style type="text/css">
+		li i {
+			color: red;
+		}
+		p i {
+			color: green;
+		}
+		li > b {
+			color: red;
+		}
+		.eee p.bbb {
+			color: red;
+		}
+		li.elem + li {
+			color: dodgerblue;
+		}
+	</style>
+</head>
+<body>
+<!--Задача 1-->
+<ul>
+	<li>пункт <i>курсив</i></li>
+	<li>пункт <i>курсив</i></li>
+	<li>пункт <i>курсив</i></li>
+	<li>пункт <i>курсив</i></li>
+</ul>
+<p>
+	текст абзаца <i>курсив</i>
+</p>
+<p>
+	текст абзаца <i>курсив</i>
+</p>
+<!--Задача 2-->
+<ul>
+	<li>
+		<i>курсив</i>
+		<b>жирный</b>
+		<b><i>жирный курсив</i></b>
+	</li>
+	<li>
+		s
+	</li>
+</ul>
+<!--Задача 3-->
+	<div>
+		<div class="eee">
+			<p class="bbb">123</p>
+		</div>
+	</div>
+	<div class="eee">
+		<p>123</p>
+	</div>
+<!--Задача 4-->
+<ul>
+	<li>1</li>
+	<li class="elem">2</li>
+	<li>3</li>
+	<li>4</li>
+	<li class="elem">5</li>
+	<li>6</li>
+	<li>7</li>
+	<li class="elem">8</li>
+	<li>9</li>
+</ul>
+</body>
+</html>
