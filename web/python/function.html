@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="UTF-8">
+		<title>Функции в Python</title>
+		<link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
+		<link rel="manifest" href="img/site.webmanifest">
+		<meta name='viewport' content='width=device-width, initial-scale=1'>
+		<link href="https://fonts.googleapis.com/css?family=Rubik:400,900" rel="stylesheet">
+		<link rel="stylesheet" href="main.css">
+	</head>
+	<body>
+		<header id='header'>
+			<div class="overlay"></div>
+			<h1 id="text"></h1>
+			<button id="down">﹀</button>
+		</header>
+		<main>
+			<div class="screen">
+				<h1>Функции в Python</h1>
+				<p class="text">Функция - это именованный блок кода, к которому можно обратиться из лю&shy;бого места программы. У функции есть имя и список входных парамет&shy;ров, а также воз&shy;вращаемое значение.</p>
+				<h2 class="subtitle">Дана строка...</h2>
+				<p class="text">Функция позволяет использо&shy;вать в про&shy;грамме один и тот же фрагмент кода нес&shy;колько раз. Разберем следующую задачу:</p>
+				<code class='code code_text'>Дана строка, вместо про&shy;белов у которой стоит специальный сим&shy;вол, на&shy;пример, *, необхо&shy;димо заменить все специальные сим&shy;волы на про&shy;белы.</code> 
+				<p class="text">У нас есть строки вида:</p>
+				<code class="code">
+					string <span class="red">=</span> <span class="yellow">'вот*такие*вот*строки'</span>
+				</code>
+				<p class="text">И код, решающий эту задачу:</p>
+				<code class="code">
+					text <span class="red">=</span>&nbsp;<span class="yellow">'some*string*with*unnecessery*symbols'</span>
+					<br>
+					<br>
+					<span class="grey"># Пошаговое решение</span>
+					<br>
+					words <span class="red">=</span> text.<span class="blue">split</span>(<span class="yellow">'*'</span>)
+					<br>
+					<span class="blue">print</span>(words)
+					<br>
+					<span class="grey"># ['some', 'string', 'with', 'unnecessery', 'symbols']</span>
+					<br>
+					result <span class="red">=</span> <span class="yellow">' '</span>.<span class="blue">join</span>(words)
+					<br>
+					<span class="blue">print</span>(result)
+					<br>
+					<span class="grey"># some string with unnecessery symbols</span>
+					<br>
+					<br>
+					<br>
+					<span class="grey"># Решение в одну строку</span>
+					<br>
+					result = <span class="yellow">' '</span>.<span class="blue">join</span>(text.<span class="blue">split</span>(<span class="yellow">'*'</span>))
+				</code>
+				<p class="text">Оба этих способа прекрасно рабо&shy;тают до тех пор, пока у нас одна вход&shy;ная строка. А если строк несколько?</p>
+				<code class="code">
+					<span class="grey"># ???</span>
+					<br>
+					text1 <span class="red">=</span> <span class="yellow">'i*love*Python'</span>
+					<br>
+					text2 <span class="red">=</span> <span class="yellow">'Python*is*great'</span>
+					<br>
+					text3 <span class="red">=</span> <span class="yellow">'Programming*is*simpler*than*you*think'</span>
+				</code>
+				<p class="text">Можно, конечно, обрабатывать строки в цикле. Например, вот так:</p>
+				<code class="code">
+					
+					lines <span class="red">=</span> [text1, text2, text3]
+					<br>
+					<br>
+					<span class="grey"># Пошаговое решение</span>
+					<br>
+					result <span class="red">=</span> []
+					<br>
+					<span class="blue">for</span> line <span class="red">in</span> lines:
+					<br>
+					&emsp;&emsp;&emsp;&emsp;result = <span class="blue">append</span>(<span class="yellow">' '</span>.<span class="blue">join</span>(line.<span class="blue">split</span>(<span class="yellow">'*'</span>)))
+					<br>
+					<br>
+					<span class="grey"># Решение в одну строку</span>
+					<br>
+					results = [<span class="yellow">' '</span>.<span class="blue">join</span>(line.<span class="blue">split</span>(<span class="yellow">'*'</span>)) <span class="blue">for</span> line <span class="red">in</span> lines]
+				</code>
+				<p class="text">А если "лишний символ" для каждой строки будет различ&shy;ным? Тогда придется обрабаты&shy;вать каждую строку отдельно. Чтобы сделать код, приведен&shy;ный выше, универсальным нам необходимы функции.</p>
+				<h2 class="subtitle">Объявление функции</h2>
+				<p class="text">Рассмотрим синтаксис объявле&shy;ния функции:</p>
+				<code class='code'>
+					<span class="blue">def</span>&nbsp;<span class="green">greeting</span>(name):
+					<br>
+					&nbsp;&nbsp;&nbsp;&nbsp;<span class="blue">print</span>(<span class="yellow">'Hello, '</span> <span class="red">+</span> name)
+					<br>
+					<br>
+					<span class='grey'># Вызываем функцию</span>
+					<br>
+					<span class="blue">greeting(<span class="yellow">'Max'</span></span>)
+					<br>
+					<span class="grey"># Hello, Max</span>
+					<br>
+					<span class="blue">greeting(<span class="yellow">'Ivan'</span></span>)
+					<br>
+					<span class="grey"># Hello, Ivan</span>
+					<br>
+					<span class="blue">greeting(<span class="yellow">'Alex'</span></span>)
+					<br>
+					<span class="grey"># Hello, Alex</span>
+					<br>
+					<span class="blue">greeting(<span class="yellow">'Kate'</span></span>)
+					<br>
+					<span class="grey"># Hello, Kate</span>
+				</code>
+				<p class="text">Перед объявлением имени функции <code>greeting</code> пишется служебное слово <code>def</code>, а после имени функции обяза&shy;тельно записываются круглые скобки, в которые передается параметр <code>name</code></p>
+				<p class="text">Типичное объявление функции в Python выглядит так:</p>
+				<code class="code">
+					<span class="blue">def</span> <span class="green">function_name</span>(<span class="orange">argument1, argument2, ...</span>):
+					<br>
+					&nbsp;&nbsp;&nbsp;&nbsp;<span class="grey"># код функции</span>
+				</code>
+				<p class="text">Представим себе работу обычного калькулятора. Мы вводим первое число, операцию и второе число. Калькулятор возвращает нам результат операции над этими числами. Всё просто, не так ли? Функции точно так же умеют возвращать значение с помощью служебного слова <code>return</code>.</p>
+				<p class="text">Проиллюстрируем это на примере функции сложения двух чисел:</p>
+				<code class="code">
+					<span class="blue">def</span> <span class="green">add</span>(<span class="orange">a, b</span>):
+					<br>
+					&nbsp;&nbsp;&nbsp;&nbsp;<span class="red">return</span> a <span class="red">+</span> b
+					<br>
+					<br>
+					<span class="grey"># Вызовем нашу функцию</span>
+					<br>
+					s1 <span class="red">=</span> <span class="blue">add</span>(10, 2)
+					<br>
+					s2 <span class="red">=</span> <span class="blue">add</span>(108, 100)
+					<br>
+					s3 <span class="red">=</span> <span class="blue">add</span>(3, 1)
+					<br>
+					<span class="blue">print</span>(s1, s2, s3)
+					<br>
+					<span class="grey"># 12 208 4</span>
+				</code>
+				<p class="text">Напишем функцию умножения двух чисел:</p>
+				<code class="code">
+					<span class="blue">def</span> <span class="green">mult</span>(<span class="orange">a, b</span>):
+					<br>
+					&nbsp;&nbsp;&nbsp;&nbsp;<span class="red">return</span> a <span class="red">*</span> b
+					<br>
+					<br>
+					<span class="grey"># Вызовем нашу функцию</span>
+					<br>
+					m1 <span class="red">=</span> <span class="blue">mult</span>(10, 2)
+					<br>
+					m2 <span class="red">=</span> <span class="blue">mult</span>(108, 100)
+					<br>
+					m3 <span class="red">=</span> <span class="blue">mult</span>(3, 1)
+					<br>
+					<span class="blue">print</span>(m1, m2, m3)
+					<br>
+					<span class="grey"># 20 10800 3</span>
+				</code>
+				<h2 class="subtitle">Решение задачи "лишнего сим&shy;вола"</h2>
+				<p class="text">А теперь вернемся к примеру разо&shy;бран&shy;ному в начале статьи. Наша функция, назовем ее <code>removeSymbol</code>, будет прини&shy;мать в качестве пара&shy;метров символ, который нужно заме&shy;нить на пробел, и строку, содер&shy;жа&shy;щую этот самый символ.</p>
+				<code class="code">
+					<span class="blue">def</span> <span class="green">removeSymbol</span>(<span class="orange">symbol, string</span>):
+					<br>
+					&nbsp;&nbsp;&nbsp;&nbsp;<span class="red">return</span>  <span class="yellow">' '</span>.<span class="blue">join</span>(string.<span class="blue">split</span>(symbol))
+					<br>
+					<br>
+					<span class="grey"># Вызовем нашу функцию</span>
+					<br>
+					formatted_text1 <span class="red">=</span> <span class="blue">removeSymbol</span>(<span class="yellow">'*'</span>, <span class="yellow">'слишком*много*звездочек'</span>)
+					<br>
+					formatted_text2 <span class="red">=</span> <span class="blue">removeSymbol</span>(<span class="yellow">'--'</span>, <span class="yellow">'слишком--много--черточек'</span>)
+					<br>
+					<span class="blue">print</span>(formatted_text1)
+					<br>
+					<span class="grey"># слишком много звездочек</span>
+					<br>
+					<span class="blue">print</span>(formatted_text2)
+					<br>
+					<span class="grey"># слишком много черточек</span>
+				</code>
+				<h2 class="subtitle">Аргументы по умолчанию</h2>
+				<p class="text">Рассмотрим еще раз функцию <code>greeting</code>. Перепишем её со служебным словом <code>return</code></p>
+				<code class='code'>
+					<span class="blue">def</span>&nbsp;<span class="green">greeting</span>(name):
+					<br>
+					&nbsp;&nbsp;&nbsp;&nbsp;<span class="red">return</span> <span class="yellow">'Hello, '</span> <span class="red">+</span> name
+					<br>
+					<br>
+					<span class="blue">print</span>(greeting(<span class="yellow">'Alex'</span>))
+					<br>
+					<span class="grey"># Hello, Alex</span>
+				</code>
+				<p class="text">Теперь функция <code>greeting</code> возвращает строковое значе&shy;ние, которое мы можем прис&shy;воить какой-нибудь переменной</p>
+				<code class="code">
+					helloMax = <span class="blue">greeting</span>(<span class="yellow">'Max'</span>)
+					<br>
+					<span class="blue">print</span>(helloMax)
+					<br>
+					<span class="grey"># Hello, Max</span>
+				</code>
+				<p class="text">Но если мы приветствовать каждого пользователя по-своему? Тогда нам нужно пере&shy;дать в <code>greeting</code> еще один аргумент</p>
+				<code class='code'>
+					<span class="blue">def</span>&nbsp;<span class="green">greeting</span>(name, hello):
+					<br>
+					&nbsp;&nbsp;&nbsp;&nbsp;<span class="red">return</span> hello <span class="red">+</span> <span class="yellow">', '</span> <span class="red">+</span> name
+					<br>
+					<br>
+					<span class="blue">print</span>(greeting(<span class="yellow">'Alex'</span>,<span class="yellow">'Hello'</span>))
+					<br>
+					<span class="grey"># Hello, Alex</span>
+					<br>
+					<span class="blue">print</span>(greeting(<span class="yellow">'Kate'</span>,<span class="yellow">'Salute'</span>))
+					<br>
+					<span class="grey"># Salute, Kate</span>
+				</code>
+				<p class="text">А что если пользователю неважно, как мы его попри&shy;ветст&shy;вуем? Тогда логично было бы по умолчанию использовать какое-то одно при&shy;ветст&shy;вие и иногда его изменять. В програм&shy;мировании эта концепция назы&shy;вается "аргумент по умол&shy;чанию". Если в вызов функции не передали одного или нес&shy;коль&shy;ких аргументов, то будут использованы аргументы по умолчанию.</p>
+				<code class='code'>
+					<span class="blue">def</span>&nbsp;<span class="green">greeting</span>(name, hello=<span class="yellow">'hello'</span>):
+					<br>
+					&nbsp;&nbsp;&nbsp;&nbsp;<span class="red">return</span> hello <span class="red">+</span> <span class="yellow">', '</span> <span class="red">+</span> name
+					<br>
+					<br>
+					<span class="blue">print</span>(greeting(<span class="yellow">'Alex'</span>)
+					<br>
+					<span class="grey"># Hello, Alex</span>
+					<br>
+					<span class="blue">print</span>(greeting(<span class="yellow">'Kate'</span>,<span class="yellow">'Salute'</span>))
+					<br>
+					<span class="grey"># Salute, Kate</span>
+				</code>
+				
+			</div>
+		</main>
+		<script src='js/smoothscroll.js' async></script>
+		<script>
+			document.addEventListener("DOMContentLoaded", function() {
+				var name = 'Функции в Python',
+					text = document.getElementById('text');
+				
+				setTimeout(() => name.split('').forEach((character, index) => setTimeout(() => text.innerHTML += character, 150*index)),500)
+				
+				down.addEventListener('click', function() {	 
+
+					// if   
+					document.querySelector('main').scrollIntoView({block: "start", behavior: "smooth"}) 
+					// var currentPos = window.scrollY || window.screenTop,
+					// 	pos = document.querySelector('main').offsetTop,
+					// 	id = setInterval(frame, 10),
+					// 	step = (pos - currentPos) / 40;
+					// function frame() {
+					// 	if (currentPos > pos)
+					// 		clearInterval(id);
+					// 	else {
+					// 		currentPos+=step;
+					// 		window.scrollTo(0, currentPos)
+					// 	}
+					// }
+				})
+			});
+		</script>
+	</body>
+</html>

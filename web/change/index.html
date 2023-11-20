@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<title>Change background</title>
+	<meta name='viewport' content='width=device-width, initial-scale=1'>
+	<style>
+		html, body, .box {
+			height: 100%;
+			margin: 0;
+		}
+
+		.box {
+			display: flex;
+			justify-content: center;
+			-ms-align-items: center;
+			align-items: center;
+			flex-direction: column;
+			max-width: 300px;
+			margin: auto;
+		}
+		
+		body {
+			background-position: center; 
+			-webkit-background-size: cover;
+			background-size: cover;
+		}
+
+		button {
+			display: block;
+			margin: 5px;
+			height: 50px;
+			width: 100%;
+			padding: 15px 25px;
+			cursor: pointer;
+			background: #333;
+			border: none;
+			color: white;
+			text-shadow: 1px 1px 1px rgba(0,0,0,0.7);
+			font-weight: bold;
+			box-shadow: 2px 2px 10px 2px rgba(0,0,0,0.5);
+			outline: none;
+			user-select: none;
+			transition: 0.1s;
+			font-size: 14px;
+			letter-spacing: 0.4px;	
+			border-radius: 5px;	
+
+		}
+
+		button:active {
+			transform: translate(1px, 1px);
+			box-shadow: none;
+		}
+
+		button:hover {
+			background: #444;
+		}
+	</style>
+</head>
+<body>
+	<div class="box">
+		<button class="red">ВКЛЮЧИТЬ ЯРОСТЬ</button>
+		<button class="white">ВЫКЛЮЧИТЬ ЯРОСТЬ</button>
+		<button class="blue">НЕБЕСНОЕ СПОКОЙСТВИЕ</button>
+		<button class="green">ВКЛЮЧИТЬ РЕЖИМ ЗЕЛЕНИ</button>
+		<button class="yellow">ВКЛЮЧИТЬ СОЛНЫШКО</button>
+		<button class="img">ФООООООООН</button>
+	</div>
+	
+	
+	<script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+
+  <script>
+  	$(document).ready(function() {
+
+  		$('.red').click(function() {
+  			$('body').css('background', 'red')
+  		})
+
+  		$('.white').click(function() {
+  			$('body').css('background', 'white')
+  		})
+  		$('.blue').click(function() {
+  			$('body').css('background', 'dodgerblue')
+  		})
+  		$('.green').click(function() {
+  			$('body').css('background', '#8bc34a')
+  		})
+  		$('.yellow').click(function() {
+  			$('body').css('background', '#ffeb3b')
+  		})
+  		$('.img').click(function() {
+  			$('body').css('background', 'url(picture.jpeg)')
+  		})
+  		
+
+  		console.log('ЖИКВЕРИ ЖИВ')
+  	})
+  </script>
+</body>
+</html>

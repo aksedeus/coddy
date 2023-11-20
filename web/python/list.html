@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="UTF-8">
+		<title>Списки в Python</title>
+		<meta name='viewport' content='width=device-width, initial-scale=1'>
+		<link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
+		<link rel="manifest" href="img/site.webmanifest">
+		<meta name="yandex-verification" content="9ac4fb38cc221824" />
+		<link href="https://fonts.googleapis.com/css?family=Rubik:400,900" rel="stylesheet">
+		
+		<link rel="stylesheet" href="main.css">
+	</head>
+	<body>
+		<header id='header'>
+			<div class="overlay"></div>
+			<h1 id="text"></h1>
+			<button id="down">﹀</button>
+		</header>
+		<main>
+			<div class="screen">
+				<h1 style='margin-bottom: 0;'>Списки в Python</h1>
+				<h2 style='margin-top: 0.5em;' class="subtitle">Часть 1</h2>
+				<p class="text">Список - это тип данных для хране&shy;ния последовательности элементов. Каждому элементу списка присваи&shy;вается поряд&shy;ковый номер - его индекс. Первый индекс равен нулю, второй - единице и так далее. Основные операции для работы со спис&shy;ками - это индексиро&shy;вание, срезы, добав&shy;ление и удаление элементов, а также проверка на наличие элемента в последо&shy;ватель&shy;ности.</p>
+				<h2 class="subtitle">Создание списка</h2>
+				<p class="text">Создание пустого списка выгля&shy;дит так:</p>
+				<code class='code'>empty_list <span class="red">=</span> []</code>
+				<p class="text">Создадим список, состоящий из несколь&shy;ких чисел:</p>
+				<code class='code'>numbers <span class="red">=</span> [<span class="purple">40</span>, <span class="purple">20</span>, <span class="purple">90</span>, <span class="purple">11</span>, <span class="purple">5</span>]</code>
+				<p class="text">Настало время строковых перемен&shy;ных:</p>
+				<code class='code'>fruits <span class="red">=</span> [<span class="yellow">'Apple'</span>, <span class="yellow">'Grape'</span>, <span class="yellow">'Peach'</span>, <span class="yellow">'Banan'</span>, <span class="yellow">'Orange'</span>]</code>
+				<p class="text">Не будем забывать и о дробях:</p>
+				<code class="code">fractions<span class="red"> = </span>[<span class="purple">3.14</span>, <span class="purple">2.72</span>, <span class="purple">1.41</span>, <span class="purple">1.73</span>, <span class="purple">17.9</span>]</code>
+				<p class="text">Мы можем создать список, состоящий из различных типов данных:</p>
+				<code class="code">
+					values<span class="red"> = </span>[<span class="purple">3.14</span>, <span class="purple">10</span>, <span class="yellow">'Hello world!'</span>, <span class="purple">False</span>, <span class="yellow">'Python is the best'</span>]
+				</code>
+				<p class="text">И такое возможно <code>(⊙_⊙)</code></p>
+				<code class="code">
+					list_of_lists<span class="red"> = </span>[[<span class="purple">2</span>, <span class="purple">4</span>, <span class="purple">0</span>], [<span class="purple">11</span>, <span class="purple">2</span>, <span class="purple">10</span>], [<span class="purple">0</span>, <span class="purple">19</span>, <span class="purple">27</span>]]
+				</code>
+				<h2 class="subtitle">Индексирова&shy;ние</h2>
+				<p class="text">Что же такое индексирование? Это загадочное слово обозна&shy;чает операцию обращения к элементу по его поряд&shy;ковому номеру (&nbsp;<code>( ･ω･)ア</code> напоминаю, что нумерация начи&shy;нается с нуля). Проиллюстрируем это на примере:</p>
+				<code class="code">
+					fruits <span class="red">=</span> [<span class="yellow">'Apple'</span>, <span class="yellow">'Grape'</span>, <span class="yellow">'Peach'</span>, <span class="yellow">'Banan'</span>, <span class="yellow">'Orange'</span>]
+					<br>
+					fruits[<span class="purple">0</span>]
+					<br>
+					<span class="grey"># 'Apple'</span>
+					<br>
+					fruits[<span class="purple">1</span>]
+					<br>
+					<span class="grey"># 'Grape'</span>
+					<br>
+					fruits[<span class="purple">4</span>]
+					<br>
+					<span class="grey"># 'Orange'</span>
+				</code>
+				<p class="text">Списки в Python являются изме&shy;няемым типом данных. Мы можем изменять содер&shy;жимое каждой из ячеек:</p>
+				<code class="code">
+					fruits <span class="red">=</span> [<span class="yellow">'Apple'</span>, <span class="yellow">'Grape'</span>, <span class="yellow">'Peach'</span>, <span class="yellow">'Banan'</span>, <span class="yellow">'Orange'</span>]
+					<br>
+					fruits[<span class="purple">0</span>]<span class="red"> = </span><span class="yellow">'Watermelon'</span>
+					<br>
+					fruits[<span class="purple">3</span>]<span class="red"> = </span><span class="yellow">'Lemon'</span>
+					<br>
+					<span class="blue">print</span>(fruits)
+					<br>
+					<span class="grey"># ['Watermelon', 'Grape', 'Peach', 'Lemon', 'Orange']</span>
+				</code>
+				<p class="text">Индексирование работает и в обратную сторону. Как такое возможно? Всё просто, мы обра&shy;щаемся к элементу списка по отрица&shy;тельному индексу. Индекс с номе&shy;ром <code>-1</code> дает нам доступ к после&shy;днему элементу, <code>-2</code> к предпоследнему и так далее.</p>
+				<code class="code">
+					fruits <span class="red">=</span> [<span class="yellow">'Apple'</span>, <span class="yellow">'Grape'</span>, <span class="yellow">'Peach'</span>, <span class="yellow">'Banan'</span>, <span class="yellow">'Orange'</span>]
+					<br>
+					fruit[<span class="red">-</span><span class="purple">1</span>]
+					<br>
+					<span class="grey"># 'Orange'</span>
+					<br>
+					fruit[<span class="red">-</span><span class="purple">2</span>]
+					<br>
+					<span class="grey"># 'Banan'</span>
+					<br>
+					fruit[<span class="red">-</span><span class="purple">3</span>]
+					<br>
+					<span class="grey"># 'Peach'</span>
+					<br>
+					fruit[<span class="red">-</span><span class="purple">4</span>]
+					<br>
+					<span class="grey"># 'Grape'</span>
+				</code>
+				<h2 class="subtitle">Создание списка с помощью <code>list()</code></h2>
+				<p class="text">Переходим к способам создания списка. Самый простой из них был приведен выше. Еще раз для закреп&shy;ления:</p>
+				<code class='code'>smiles<span class="red"> = </span>[<span class="yellow">'(ಠ_ಠ)'</span>, <span class="yellow">'(￣﹃￣)'</span>, <span class="yellow">'( ͡° ͜ʖ ͡°)'</span>, <span class="yellow">'(╮°-°)╮'</span>]</code>
+				<p class="text">А есть еще способы? Да, есть. Один из них — создание списка с помощью функции <code>list()</code> В неё мы можем передать любой итерируемый объект (да-да, тот самый по которому можно запустить цикл <code>(• ᵕ •)</code> )</p>
+				<p class="text">Рассмотрим несколько примеров:</p>
+				<code class="code">
+					letters<span class="red"> = </span><span class="blue">list</span>(<span class="yellow">'abcdef'</span>)
+					<br>
+					numbers<span class="red"> = </span><span class="blue">list</span>(<span class="blue">range</span>(<span class="purple">10</span>))
+					<br>
+					even_numbers<span class="red"> = </span><span class="blue">list</span>(<span class="blue">range</span>(<span class="purple">0</span>, <span class="purple">10</span>, <span class="purple">2</span>))
+					<br>
+					<span class="blue">print</span>(letters)
+					<br>
+					<span class="grey"># ['a', 'b', 'c', 'd', 'e', 'f']</span>
+					<br>
+					<span class="blue">print</span>(numbers)
+					<br>
+					<span class="grey"># [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]</span>
+					<br>
+					<span class="blue">print</span>(even_numbers)
+					<br>
+					<span class="grey"># [0, 2, 4, 6, 8]</span>
+				</code>
+				<h2 class="subtitle">Длина списка</h2>
+				<p class="text">С созданием списка вроде ра&shy;зобрались. Следующий вопрос: как узнать длину списка? Мож&shy;но, конечно, просто посчитать количество элементов... <code>(⊙_⊙)</code> Но есть способ получ&shy;ше! Функция <code>len()</code> возвращает длину любой итерируемой пере&shy;менной, переменной, по которой можно запустить цикл. Рас&shy;смотрим пример:</p>
+				<code class='code'>
+					fruits <span class="red">=</span> [<span class="yellow">'Apple'</span>, <span class="yellow">'Grape'</span>, <span class="yellow">'Peach'</span>, <span class="yellow">'Banan'</span>, <span class="yellow">'Orange'</span>]
+					<br>
+					<span class="blue">print</span>(<span class="blue">len</span>(fruits))
+					<br>
+					<span class="grey"># 5</span>
+					<br>
+					numbers <span class="red">=</span> [<span class="purple">40</span>, <span class="purple">20</span>, <span class="purple">90</span>]
+					<br>
+					<span class="blue">print</span>(<span class="blue">len</span>(numbers))
+					<br>
+					<span class="grey"># 3</span>
+				</code>
+				<p class="text">"...любой итерируемой", а это значит:</p>
+				<code class="code">
+					string<span class="red"> = </span><span class="yellow">'Hello world'</span>
+					<br>
+					<span class="blue">print</span>(<span class="blue">len</span>(string))
+					<br>
+					<span class="grey"># 11</span>
+					<br>
+					<span class="blue">print</span>(<span class="blue">range</span>(<span class="purple">10</span>))
+					<br>
+					<span class="grey"># 10</span>
+				</code>
+				<h2 class="subtitle">Срезы</h2>
+				<p class="text">В начале статьи что-то гово&shy;рилось о "срезах". Давайте разберем подробнее, что это такое. Срезом называется неко&shy;торая подпос&shy;ледователь&shy;ность. Принцип действия срезов очень прост: мы "отре&shy;заем" кусок от исходной последова&shy;тель&shy;ности элемента, не меняя её при этом. Я сказал "последо&shy;вательность", а не "спи&shy;сок", потому что срезы работают и со другими итерируемыми типами данных, например, со строками.</p>
+				<code class="code">
+					fruits <span class="red">=</span> [<span class="yellow">'Apple'</span>, <span class="yellow">'Grape'</span>, <span class="yellow">'Peach'</span>, <span class="yellow">'Banan'</span>, <span class="yellow">'Orange'</span>]
+					<br>
+					part_of_fruits<span class="red"> = </span>fruits[<span class="purple">0</span>:<span class="purple">3</span>]
+					<br>
+					<span class="blue">print</span>(part_of_fruits)
+					<br>
+					<span class="grey"># ['Apple', 'Grape', 'Peach']</span>
+				</code>
+				<p class="text">Детально рассмотрим синтаксис срезов:</p>
+				<code class="code">
+					</span>итерируемая_переменная[начальный_индекс:конечный_индекс - <span class="purple">1</span>:длина_шага]
+				</code>
+				<p class="text">Обращаю ваше внимание, что мы делаем срез от <code>начального индекса</code> до <code>конечного индекса - 1</code>. То есть <code>i = начальный_индекс</code> и <code>i < конечный индекс</code> </p>
+				<p class="text">Больше примеров!</p>
+				<code class="code">
+					fruits <span class="red">=</span> [<span class="yellow">'Apple'</span>, <span class="yellow">'Grape'</span>, <span class="yellow">'Peach'</span>, <span class="yellow">'Banan'</span>, <span class="yellow">'Orange'</span>]
+					<br>
+					<span class="blue">print</span>(fruits[<span class="purple">0</span>:<span class="purple">1</span>])
+					<br>
+					<span class="grey"># ['Apple']</span>
+					<br>
+					<span class="grey"># Если начальный индекс равен 0, то его можно опустить</span>
+					<br>
+					<span class="blue">print</span>(fruits[:<span class="purple">2</span>])
+					<br>
+					<span class="grey"># ['Apple', 'Grape']</span>
+					<br>
+					<span class="blue">print</span>(fruits[:<span class="purple">3</span>])
+					<br>
+					<span class="grey"># ['Apple', 'Grape', 'Peach']</span>
+					<br>
+					<span class="blue">print</span>(fruits[:<span class="purple">4</span>])
+					<br>
+					<span class="grey"># ['Apple', 'Grape', 'Peach', 'Banan']</span>
+					<br>
+					<span class="blue">print</span>(fruits[:<span class="purple">5</span>])
+					<br>
+					<span class="grey"># ['Apple', 'Grape', 'Peach', 'Banan', 'Orange']</span>
+					<br>
+					<span class="grey"># Если конечный индекс равен длине списка, то его тоже можно опустить</span>
+					<br>
+					<span class="blue">print</span>(fruits[:<span class="blue">len</span>(fruits)])
+					<br>
+					<span class="grey"># ['Apple', 'Grape', 'Peach', 'Banan', 'Orange']</span>
+					<br>
+					<span class="blue">print</span>(fruits[::])
+					<br>
+					<span class="grey"># ['Apple', 'Grape', 'Peach', 'Banan', 'Orange']</span>
+				</code>
+				<p class="text">Самое время понять, что делает третий параметр среза - длина шага!</p>
+				<code class="code">
+					fruits <span class="red">=</span> [<span class="yellow">'Apple'</span>, <span class="yellow">'Grape'</span>, <span class="yellow">'Peach'</span>, <span class="yellow">'Banan'</span>, <span class="yellow">'Orange'</span>]
+					<br>
+					<span class="blue">print</span>(fruits[::<span class="purple">2</span>])
+					<br>
+					<span class="grey"># ['Apple', 'Peach', 'Orange']</span>
+					<br>
+					<span class="blue">print</span>(fruits[::<span class="purple">3</span>])
+					<br>
+					<span class="grey"># ['Apple', 'Banan']</span>
+					<br>
+					<span class="grey"># Длина шага тоже может быть отрицательной!</span>
+					<br>
+					<span class="blue">print</span>(fruits[::<span class="purple">-1</span>])
+					<br>
+					<span class="grey"># ['Orange', 'Banan', 'Peach', 'Grape', 'Apple']</span>
+					<br>
+					<span class="blue">print</span>(fruits[<span class="purple">4</span>:<span class="purple">2</span>:<span class="purple">-1</span>])
+					<br>
+					<span class="grey"># ['Orange', 'Banan']</span>
+					<br>
+					<span class="blue">print</span>(fruits[<span class="purple">3</span>:<span class="purple">1</span>:<span class="purple">-1</span>])
+					<br>
+					<span class="grey"># ['Banan', 'Peach']</span>
+				</code>
+				<p class="text">А теперь вспоминаем всё, что мы знаем о циклах. В Python их целых два! Цикл <code>for</code> и цикл <code>while</code>&nbsp;Нас интересует цикл <code>for</code>, с его помощью мы можем перебирать зна&shy;чения и индексы наших после&shy;дователь&shy;ностей. Начнем с перебора значений:</p>
+				<code class='code'>
+					fruits <span class="red">=</span> [<span class="yellow">'Apple'</span>, <span class="yellow">'Grape'</span>, <span class="yellow">'Peach'</span>, <span class="yellow">'Banan'</span>, <span class="yellow">'Orange'</span>]
+					<br>
+					<span class="blue">for</span> fruit <span class="red">in</span> fruits:
+					<br>
+					&nbsp;&nbsp;&nbsp;&nbsp;<span class="blue">print</span>(fruit, end=<span class="yellow">' '</span>)
+					<br>
+					<span class="grey"># Apple Grape Peach Banan Orange</span>
+				</code>
+				<p class="text">Выглядит несложно, правда? В перемен&shy;ную <code>fruit</code> объявлен&shy;ную в цикле по оче&shy;реди записы&shy;ваются значения всех эле&shy;мен&shy;тов списка <code>fruits</code></p>
+				<p class="text">А что там с перебором индексов?</p>
+				<code class="code">
+					<span class="blue">for</span> index <span class="red">in</span> <span class="blue">range</span>(<span class="blue">len</span>(fruits)):
+					<br>
+					&nbsp;&nbsp;&nbsp;&nbsp;<span class="blue">print</span>(fruits[index], end=<span class="yellow">' '</span>)
+					<br>
+					<span class="grey"># Apple Grape Peach Banan Orange</span>
+				</code>
+				<p class="text">Этот пример гораздо интерес&shy;нее преды&shy;дущего! Что же здесь происходит? Для начала разбе&shy;ремся, что делает фун&shy;кция <code><span class="blue">range</span>(<span class="blue">len</span>(fruits))</code> Мы с вами знаем, что функция <code>len()</code> возвращает дли&shy;ну списка, а <code>range()</code> генерирует диапа&shy;зон целых чисел от <code>0</code> до <code>len()-1</code>. Сложив <code>2+2</code>, мы получим, что перемен&shy;ная <code>index</code> принимает значения в диапазоне от <code>0</code> до <code>len()-1</code>. Идем дальше, <code>fruits[index]</code> - это обраще&shy;ние по индексу к элементу с индексом <code>index</code> списка <code>fruits</code>. А так как переменная <code>index</code> принимает зна&shy;чения всех индексов списка <code>fruits</code>, то в цикле мы переберем значе&shy;ния всех эле&shy;ментов наше&shy;го спи&shy;ска!</p>
+
+			</div>
+		</main>
+		<script src='js/smoothscroll.js'></script>
+		<script>
+			document.addEventListener("DOMContentLoaded", function() {
+				var name = 'Списки в Python',
+					text = document.getElementById('text');
+				
+				setTimeout(() => name.split('').forEach((character, index) => setTimeout(() => text.innerHTML += character, 150*index)),500)
+				
+				down.addEventListener('click', function() {	 
+
+					// if   
+					document.querySelector('main').scrollIntoView({block: "start", behavior: "smooth"}) 
+					// var currentPos = window.scrollY || window.screenTop,
+					// 	pos = document.querySelector('main').offsetTop,
+					// 	id = setInterval(frame, 10),
+					// 	step = (pos - currentPos) / 40;
+					// function frame() {
+					// 	if (currentPos > pos)
+					// 		clearInterval(id);
+					// 	else {
+					// 		currentPos+=step;
+					// 		window.scrollTo(0, currentPos)
+					// 	}
+					// }
+				})
+			});
+
+			
+		</script>
+	</body>
+</html>
