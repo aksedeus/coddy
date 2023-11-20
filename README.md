@@ -1,7 +1,7 @@
 <h1 align="center">Coddy Materials <img src="https://github.com/blackcater/blackcater/raw/main/images/Hi.gif" height="32"/></h1>
 <br>
 
-[![Typing SVG](https://readme-typing-svg.demolab.com/?lines=Hello+Teachers+;Hello+Students+&height=75&size=54)](https://git.io/typing-svg)
+[![Typing SVG](https://readme-typing-svg.demolab.com/?lines=Hello+Teachers+;Hello+Students+&height=75&size=32)](https://git.io/typing-svg)
 ## Оглавление
 1. Введение
 2. Рекомендации
