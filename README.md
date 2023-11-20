@@ -1,17 +1,29 @@
 # Coddy Materials
 Дополнительные материалы по курсам для преподавателей
 ## Оглавление
-1. [Введение]
-2. [Полезные ссылки]
+1. Введение
+2. Полезные ссылки
+
+## Введение
+Coddy Materials - общий репозиторий по направлениям курсов. Дополнительные материалы от преподавателей включают в себя: проекты, тестирования, презенатции, видеоролики, полезные ссылки и прочее. Со временем репозиторий будет дополняться рекомендациями по курсам, а также новыми материалами.
+
+## Рекомендации по направлениям
+1. Scratch -
+2. Minecraft -
+3. Python -
+4. Web -
+5. JS -
+6. TeleBot -
+7. Harward -
 
 ## Полезные ссылки
 | Направление | Описание                                                        |
 |----------|-----------------------------------------------------------------|
-| Python | [Сборник задач Python]([https://younglinux.info/](https://younglinux.info/python/task/)) |
-| Pygame | [Лекции по Pygame](https://younglinux.info/pygame/) |
 | Общее  | [Онлайн Компилятор](https://www.onlinegdb.com/) |
 | Общее	 | [Тренажёр скорости печати](https://stamina-online.com/ru) |
 | Общее	 | [Нейросеть для кода](https://codepal.ai/) |
+| Python | [Сборник задач Python]([https://younglinux.info/](https://younglinux.info/python/task/)) |
+| Pygame | [Лекции по Pygame](https://younglinux.info/pygame/) |
 | Web    | [Лекции и Задачи по Web](https://weblecture.ru/) |
 | Web	   | [Лучшая документация по Web](https://doka.guide/) |
 | Web    | [Тесты HTML](https://www.w3schools.com/html/exercise.asp?filename=exercise_html_basic1) |
