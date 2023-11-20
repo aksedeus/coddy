@@ -22,7 +22,7 @@ Coddy Materials - общий репозиторий по направления�
 | Общее  | [Онлайн Компилятор](https://www.onlinegdb.com/) |
 | Общее	 | [Тренажёр скорости печати](https://stamina-online.com/ru) |
 | Общее	 | [Нейросеть для кода](https://codepal.ai/) |
-| Python | [Сборник задач Python]([https://younglinux.info/](https://younglinux.info/python/task]) |
+| Python | [Сборник задач Python](https://younglinux.info/python/task) |
 | Pygame | [Лекции по Pygame](https://younglinux.info/pygame/) |
 | Web    | [Лекции и Задачи по Web](https://weblecture.ru/) |
 | Web	   | [Лучшая документация по Web](https://doka.guide/) |
