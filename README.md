@@ -29,11 +29,10 @@ Coddy Materials - общий репозиторий по направления�
 | Общее	 | [Нейросеть для видео](https://www.lobe.ai/) |
 | Python | [Сборник задач Python](https://younglinux.info/python/task) |
 | Pygame | [Лекции по Pygame](https://younglinux.info/pygame/) |
+| Pygame | [Сборник игр Pygame](https://github.com/pyGuru123/Python-Games?tab=readme-ov-file) |
 | Web    | [Лекции и Задачи по Web](https://weblecture.ru/) |
 | Web	   | [Лучшая документация по Web](https://doka.guide/) |
 | Web    | [Тесты HTML](https://www.w3schools.com/html/exercise.asp?filename=exercise_html_basic1) |
 | Web    | [Тесты CSS](https://www.w3schools.com/css/exercise.asp) |
 | Web    | [Идеи проектов](https://www.youtube.com/playlist?list=PLSDeUiTMfxW7lm7P7GZ8qtNFffHAR5d_w) |
 | С    | [Лекции по Си](https://prog-cpp.ru/c/) |
-
-
