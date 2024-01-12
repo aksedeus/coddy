@@ -35,4 +35,5 @@ Coddy Materials - общий репозиторий по направления�
 | Web    | [Тесты HTML](https://www.w3schools.com/html/exercise.asp?filename=exercise_html_basic1) |
 | Web    | [Тесты CSS](https://www.w3schools.com/css/exercise.asp) |
 | Web    | [Идеи проектов](https://www.youtube.com/playlist?list=PLSDeUiTMfxW7lm7P7GZ8qtNFffHAR5d_w) |
+| JS     | [Проекты на JS](https://gist.github.com/straker/b96a4a68bd6d79cf75a833d98a2b654f) |
 | С    | [Лекции по Си](https://prog-cpp.ru/c/) |
